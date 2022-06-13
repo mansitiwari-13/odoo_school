@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="personal_student_data" model="ir.rule">
+            <field name="name">Personal Student Data</field>
+            <field ref="model_student_details" name="model_id"/>
+            <field name="domain_force">[["create_uid", " = ",user.id]]</field>
+        </record>
+    </data>
+</odoo>

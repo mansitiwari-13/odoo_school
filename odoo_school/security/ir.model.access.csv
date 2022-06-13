@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_student_details,access.student_details,model_student_class,base.group_user,1,1,1,1
+
+access_subjects,access.subjects,model_subjects,base.group_user,1,1,1,1
+
+access_fees_structure,access.fees_structure,model_fees_structure,base.group_user,1,1,1,1
+
+access_student_class,access.student_class,model_student_class,base.group_user,1,1,1,1
+
+access_create_exam_wizard,access.create_exam_wizard,model_create_exam_wizard,base.group_user,1,1,1,1
+
+access_exam,access.exam,model_exam,base.group_user,1,1,1,1
+
+
+

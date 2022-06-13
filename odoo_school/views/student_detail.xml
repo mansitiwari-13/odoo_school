@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<data>
+            <record id="student_details_graph" model="ir.ui.view">
+            <field name="name">student.details.view.graph</field>
+            <field name="model">student.details</field>
+            <field name="arch" type="xml">
+                <graph>
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="gender"/>
+                </graph>
+            </field>
+        </record>
+
+
+            <record id="student_details_tree" model="ir.ui.view">
+            <field name="name">Student Details</field>
+            <field name="model">student.details</field>
+            <field name="arch" type="xml">
+                <tree string="Student Profile">
+                    <field name="name" />
+                    <field name="age" />
+                    <field name="gender" />
+                    <field name="student_dob" />
+                </tree>
+            </field>
+        </record>
+
+
+    <record id="student_details_form" model="ir.ui.view">
+    <field name="name">student.details.form</field>
+    <field name="model">student.details</field>
+    <field name="arch" type="xml">
+
+    <form>
+    <sheet>
+    <group>
+        <field name="name"/>
+        <field name="age"/>
+        <field name="roll_no"/>
+        <field name="gender" />
+        <field name="student_dob" />
+        </group>
+
+        <group>
+          <field name="phone"/>
+         <field name="email"/>
+         <field name="class_id" />
+         <field name="fees_id" />
+            <field name="subject_ids"/>
+    </group>
+
+    </sheet>
+    </form>
+    </field>
+    </record>
+
+    <record id="action_student_details" model="ir.actions.act_window">
+    <field name="name">Student Information</field>
+    <field name="res_model">student.details</field>
+    <field name="view_mode">tree,form,graph</field>
+    </record>
+
+    <menuitem id="student_root_menu"
+              name="School"/>
+
+    <menuitem id="student_detail_menu"
+              name="Student details"
+              parent="student_root_menu"
+              action="action_student_details"/>
+
+
+
+
+
+
+    </data>
+</odoo>

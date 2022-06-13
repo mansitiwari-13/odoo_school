@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+            <record id="fees_structure_tree" model="ir.ui.view">
+            <field name="name">Fees Details</field>
+            <field name="model">fees.structure</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="fees_id"/>
+                    <field name="name"/>
+                    <field name="amount"/>
+                    <field name="fees_date"/>
+                </tree>
+            </field>
+        </record>
+
+            <record id="fees_structure_pivot" model="ir.ui.view">
+            <field name="name">Fees Details</field>
+            <field name="model">fees.structure</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="fees_id"/>
+                    <field name="name"/>
+                    <field name="amount"/>
+                    <field name="fees_date"/>
+                </pivot>
+            </field>
+        </record>
+
+    <record id="fees_structure_form" model="ir.ui.view">
+    <field name="name">Fees Detail</field>
+    <field name="model">fees.structure</field>
+    <field name="arch" type="xml">
+
+    <form>
+    <sheet>
+        <group>
+            <field name="fees_id"/>
+            <field name="name"/>
+            <field name="amount"/>
+            <field name="fees_date"/>
+        </group>
+    </sheet>
+
+    </form>
+    </field>
+    </record>
+
+
+    <record id="action_fees_structure" model="ir.actions.act_window">
+    <field name="name">Fees</field>
+    <field name="res_model">fees.structure</field>
+    <field name="view_mode">tree,form,pivot</field>
+    </record>
+
+       <menuitem id="fees_menu"
+              name="Fees"
+              parent="student_detail_menu"
+              action="action_fees_structure"/>
+
+</odoo>
